@@ -8,17 +8,45 @@ int main()
 	SetConsoleOutputCP(1251);
 	srand(static_cast<int>(time(0)));
 
-	int year;
+	//int year;
 
-	cout << "Year: ";
-	cin >> year;
+	//cout << "Year: ";
+	//cin >> year;
 
-	if (year % 10 != 0 && year%4 == 0 || year%400 == 0) {
-		cout << "В цьому році 366 днів";
+	//if (year % 10 != 0 && year%4 == 0 || year%400 == 0) {
+	//	cout << "В цьому році 366 днів";
+	//}
+	//else {
+	//	cout << "В цьому році 365 днів";
+	//}
+
+	int color, BackGround;
+
+	cout << "Цвет: ";
+	cin >> color;
+	cout << "Фон: ";
+	cin >> BackGround;
+
+	if (color == 1) {
+		cout << "\033[31m";
+	}else if (color == 2) {
+		cout << "\033[32m";
 	}
-	else {
-		cout << "В цьому році 365 днів";
+	else if (color == 3) {
+		cout << "\033[33m";
 	}
+
+
+	if (BackGround == 1) {
+		cout << "\033[41m";
+	}
+	if (BackGround == 2) {
+		cout << "\033[42m";
+	}
+	if (BackGround == 3) {
+		cout << "\033[43m";
+	}
+
 
 
 
